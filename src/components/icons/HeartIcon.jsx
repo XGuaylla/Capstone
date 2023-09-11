@@ -18,4 +18,4 @@ const HeartIcon = () => {
   );
 };
 
-export default HeartIcon
+export default HeartIcon;
