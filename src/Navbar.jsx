@@ -7,17 +7,20 @@ export default function Navbar() {
       <nav className="nav  flex justify-between items-center w-[95%] mx-auto">
         <div>
           <a href="/" className="">
-            <img className="w-32" src="src/assets/playpalace_logo.png" />
+            <img
+              className="w-40"
+              src="src/assets/Multimart-logos_transparent.png"
+            />
           </a>
         </div>
-        <div>
+        <div className="">
           <ul className="flex item-center gap-[4vw]">
             <li>
               <a
                 className="font-bold hover:text-gray-500 text-[#DDE6ED] text-3xl text-bold"
                 href="/videogame"
               >
-                Video Games
+                Men's Clothing
               </a>
             </li>
             <li>
@@ -25,7 +28,7 @@ export default function Navbar() {
                 className="font-bold hover:text-gray-500 text-[#DDE6ED] text-3xl text-bold"
                 href="/boardgames"
               >
-                Board Games
+                Woman's Clothing
               </a>
             </li>
             <li>
@@ -33,7 +36,15 @@ export default function Navbar() {
                 className="font-bold hover:text-gray-500 text-[#DDE6ED] text-3xl text-bold"
                 href="/cardgames"
               >
-                Card Games
+                Jewelery
+              </a>
+            </li>
+            <li>
+              <a
+                className="font-bold hover:text-gray-500 text-[#DDE6ED] text-3xl text-bold"
+                href="/cardgames"
+              >
+                Electronics
               </a>
             </li>
           </ul>
