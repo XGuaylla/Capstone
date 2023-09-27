@@ -1,16 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Carousel from "./components/Carousel";
+import {Route, Routes} from "react-router-dom"
+import Clothing from "./pages/clothing"
+import Electronics from "./pages/electronics";
+import Jewelry from "./pages/Jewelry";
+import Home from "./pages/Home";
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1></h1>
-    </>
-  )
+    <div>
+      <Navbar />
+      <Carousel />
+      <Home />
+      {/* <Routes>
+        <Route path="/clothing" element={<Clothing />} />
+        <Route path="/jewlery" element={<Jewelry />} />
+        <Route path="/electronics" element={<Electronics />} />
+      </Routes> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
