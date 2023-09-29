@@ -1,28 +1,25 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
 import { Route, Routes } from "react-router-dom";
 import Clothing from "./pages/clothing";
 import Electronics from "./pages/electronics";
 import Jewelry from "./pages/Jewelry";
 import Home from "./pages/Home";
-import ImageSlider from "./components/Carousel";
 import Login from "./pages/Login";
 
 function App() {
-
+  const [token, setToken] = useState(localStorage.getItem("token"))
   return (
     <div>
-      <Navbar />
-      <ImageSlider />
-      <Home />
-      {/* <Login /> */}
-      {/* <Routes>
+      <Navbar setToken={setToken} token={token} />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/clothing" element={<Clothing />} />
-        <Route path="/jewlery" element={<Jewelry />} />
+        <Route path="/jewelry" element={<Jewelry />} />
         <Route path="/electronics" element={<Electronics />} />
-      </Routes> */}
+        <Route path="/login" element={<Login setToken={setToken} />} /> 
+      </Routes>
     </div>
   );
 }
