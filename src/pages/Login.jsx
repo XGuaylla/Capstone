@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { loginUser } from "./API";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setToken }) {
     const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     async function handleSubmit(e) {
         e.preventDefault()
         const token = await loginUser(username, password)
-        ssetToken(token)
+        setToken(token)
         localStorage.setItem('token', token)
         navigate('/')
     }
@@ -50,6 +51,10 @@ export default function Login() {
             </button>
           </div>
         </form>
+        <div className="mt-2">
+            <p>Don't have and account yet?</p>
+            <Link to="/register"><button className="hover:text-[#27374D]">Register</button></Link>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchProducts } from "./API";
 import ProductBox from "../components/ProductBox";
 import ImageSlider from "../components/Carousel";
+// import MultiCarousel from "../components/MultiCarousel";
 
 export default function Home() {
   const [products, setProducts] = useState();
@@ -14,19 +15,8 @@ export default function Home() {
   }, []);
   return (
     <div>
-        <ImageSlider />
-       {/* {products &&
-        products.map((product) => (
-          <div key={product.id}>
-            <img src={product.image}></img>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Price: {product.price}</p>
-            <span>
-              Rating: {product.rating.rate} ({product.rating.count})
-            </span>
-          </div>
-        ))} */}
+      <ImageSlider />
+
       <div>
         <div className="flex justify-between ml-2 mr-2 mt-8 ">
           <div className="box relative group border hover:bg-white rounded-lg w-1/5">
@@ -58,7 +48,7 @@ export default function Home() {
               <h2>Coming Soon...</h2>
             </div>
             <div className="hoverContent w-98 mt-8 left-0 bg-blue-100 px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition duration-200 overflow-visible">
-              <h2>Content</h2>
+              {/* <MultiCarousel /> */}
             </div>
           </div>
         </div>
@@ -67,6 +57,21 @@ export default function Home() {
   );
 }
 
-function DropdownItem() {
-  return <div></div>;
-}
+// function DropdownItem() {
+//   return (
+//     <div>
+//       {products &&
+//         products.map((product) => (
+//           <div key={product.id}>
+//             <img src={product.image}></img>
+//             <h2>{product.title}</h2>
+//             <p>{product.description}</p>
+//             <p>Price: {product.price}</p>
+//             <span>
+//               Rating: {product.rating.rate} ({product.rating.count})
+//             </span>
+//           </div>
+//         ))}
+//     </div>
+//   );
+// }

@@ -2,7 +2,7 @@ const BASE_URL = 'https://fakestoreapi.com'
 
 export const fetchProducts = async () => {
     try {
-        const response = await fetch(`${BASE_URL}/product`)
+        const response = await fetch(`${BASE_URL}/products`)
         const result = await response.json()
         console.log(result)
         return result
