@@ -12,6 +12,7 @@ export default function Login({ setToken }) {
         const token = await loginUser(username, password)
         setToken(token)
         localStorage.setItem('token', token)
+        console.log(token)
         navigate('/')
     }
   return (
