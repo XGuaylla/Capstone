@@ -8,16 +8,15 @@ import Jewelry from "./pages/Jewelry";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// import MultiCarousel from "./components/MultiCarousel";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
+  const [cart , setCart] = useState([])
   return (
     <div>
-      <Navbar setToken={setToken} token={token} />
-      {/* <MultiCarousel /> */}
+      <Navbar setToken={setToken} token={token} cart={cart} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setCart={setCart}/>} />
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/jewelry" element={<Jewelry />} />
         <Route path="/electronic" element={<Electronics />} />

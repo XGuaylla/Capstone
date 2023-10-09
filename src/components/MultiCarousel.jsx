@@ -1,52 +1,41 @@
-// import Carousel from "react-multi-carousel";
-// import { useState, useEffect} from "react";
-// import "react-multi-carousel/lib/styles.css";
-// import { fetchProducts } from "../pages/API";
+import Carousel from "react-multi-carousel";
+import { useState, useEffect} from "react";
+import "react-multi-carousel/lib/styles.css";
+import Product from "./Product";
+import { fetchProducts } from "../pages/API";
 
-// export default function MultiCarousel() {
-//   const [products, setProducts] = useState();
-//   useEffect(() => {
-//     async function fetchData() {
-//       const products = await fetchProducts();
-//       setProducts(products);
-//     }
-//     fetchData();
-//   }, []);
-//   const responsive = {
-//     largeDesktop: {
-//       breakpoint: { max: 4000, min: 3000 },
-//       items: 5,
-//     },
-//     desktop: {
-//       breakpoint: { max: 3000, min: 1024 },
-//       items: 3,
-//     },
-//     tablet: {
-//       breakpoint: { max: 1024, min: 464 },
-//       items: 2,
-//     },
-//     mobile: {
-//       breakpoint: { max: 464, min: 0 },
-//       items: 1,
-//     },
-//   };
-//   return (
-//     <div>
-//       <Carousel responsive={responsive}>
-//         {products &&
-//           products.map((product) => (
-//             <div key={product.id}>
-//               <img src={product.image}></img>
-//               <h2>{product.title}</h2>
-//               <p>{product.description}</p>
-//               <p>Price: {product.price}</p>
-//               <span>
-//                 Rating: {product.rating.rate} ({product.rating.count})
-//               </span>
-//             </div>
-//           ))}
-//       </Carousel>
-//       ;
-//     </div>
-//   );
-// }
+export default function MultiCarousel() {
+    const [products, setProducts] = useState([])
+    useEffect
+    const responsive = {
+        superLargeDesktop: {
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
+  return (
+    <div>
+        <h1>Product</h1>
+      <Carousel responsive={responsive}>
+        <div>
+        </div>
+        <Product />
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </Carousel>
+      ;
+    </div>
+  );
+}
