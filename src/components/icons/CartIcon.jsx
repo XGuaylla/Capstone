@@ -1,7 +1,7 @@
 const CartIcon = () => {
   return (
     <svg
-      className="h-12 w-12 fill-current text-purple-500"
+      className="z-0 h-12 w-12 fill-current text-purple-500"
       width="800px"
       height="800px"
       viewBox="0 0 16 16"

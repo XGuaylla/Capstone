@@ -16,7 +16,7 @@ function App() {
     <div>
       <Navbar setToken={setToken} token={token} cart={cart} />
       <Routes>
-        <Route path="/" element={<Home setCart={setCart}/>} />
+        <Route path="/" element={<Home cart={cart} setCart={setCart}/>} />
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/jewelry" element={<Jewelry />} />
         <Route path="/electronic" element={<Electronics />} />

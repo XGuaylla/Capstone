@@ -35,10 +35,11 @@ export default function Navbar({ token, setToken, cart }) {
           </ul>
         </div>
         <div className="flex gap-4">
-          <HeartIcon />
-          <div>
-            {cart.length}
-            <CartIcon />
+          <div className="">
+            <p className="cartNum z-10">{cart.length}</p>
+            <a>
+              <CartIcon />
+            </a>
           </div>
           {!token && (
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
