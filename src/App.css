@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  
+.cartNum {
+  padding-left: 20px;
+  font-size: 22px;
+  color: #dde6ed;
+  margin-bottom: -16px;
+  z-index: 10 !important;
+}
+.cartIcon {
+  z-index: 0 !important;
 }

@@ -5,7 +5,7 @@ import ImageSlider from "../components/Carousel";
 import MultiCarousel from "../components/MultiCarousel";
 import Product from "../components/Product";
 
-export default function Home() {
+export default function Home({cart, setCart}) {
   const [products, setProducts] = useState();
   useEffect(() => {
     async function fetchData() {
@@ -52,12 +52,15 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      <div className="flex flex-wrap">
-        {products && products.map((product, i) => {
-          return (
-            <div key={i}><Product product={product}/></div>
-          )
-        })}
+      <div className="flex flex-wrap justify-between">
+        {products &&
+          products.map((product, i) => {
+            return (
+              <div key={i}>
+                <Product cart={cart} setCart={setCart} product={product} />
+              </div>
+            );
+          })}
       </div>
     </div>
   );
