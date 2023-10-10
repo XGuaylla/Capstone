@@ -9,6 +9,6 @@ Currently, two official plugins are available:
 
 
 Netlify Link :
-https://6516881c050a3a4af4840e96--idyllic-selkie-c584c5.netlify.app/
+https://6524cc8630106b7e3dac7550--idyllic-selkie-c584c5.netlify.app/
 
 Images not shown unsure why
